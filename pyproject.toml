@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-vision-server"
+version = "0.1.0"
+description = "MCP server for image recognition via Kimi/Moonshot vision API. Works with Claude Code."
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "coffe-d"},
+]
+keywords = ["mcp", "claude-code", "vision", "ocr", "kimi", "moonshot", "image-recognition"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Image Recognition",
+]
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "openai>=1.0.0",
+]
+
+[project.scripts]
+mcp-vision-server = "mcp_vision_server.server:main"
+
+[project.urls]
+Homepage = "https://github.com/coffe-d/MCP-Vision-Server"
+Repository = "https://github.com/coffe-d/MCP-Vision-Server"
+
+[tool.setuptools.packages.find]
+where = ["src"]
